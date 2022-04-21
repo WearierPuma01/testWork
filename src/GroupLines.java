@@ -20,7 +20,7 @@ public class GroupLines {
         String line;
         Set<String> linesHash = new HashSet<>();
         while ((line = reader.readLine()) != null){
-            String[] words = line.split(";");
+            String[] words = line.split(";", -1);
             if (words.length == columns && linesHash.add(line))
                 lines.add(words);
         }
@@ -84,7 +84,7 @@ public class GroupLines {
                 if (wordsInSets.size() == i)
                     wordsInSets.add(new HashMap<>());
 
-                if (word.equals("\"\""))
+                if (word.equals("\"\"") || word.equals(""))
                     continue;
 
                 Integer wordSetNumber = wordsInSets.get(i).get(word);

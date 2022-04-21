@@ -8,7 +8,8 @@ public class Main {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
         System.out.println(dateFormat.format(date));
-        String inputPath = "lng-big.csv";
+        String inputPath = "D:\\lng-big.csv";
+        //String inputPath = "lng.csv";
         String outputPath = "newlng.csv";
         int columns = 3;
         GroupLines.groupToSetsFromCsv(inputPath, outputPath, columns);
